@@ -4,11 +4,13 @@
 
 // You can read about packages here: https://flutter.dev/using-packages/
 import 'package:flutter/material.dart';
+import 'package:stock_management/unit.dart';
 
 // You can use a relative import, i.e. `import 'category_route.dart;'` or
 // a package import.
 // More details at http://dart-lang.github.io/linter/lints/avoid_relative_lib_imports.html
 import 'category_route.dart';
+import 'converter_route.dart';
 
 /// The function that is called when main.dart is run.
 void main() {
@@ -21,12 +23,11 @@ void main() {
 /// has a list of [Unit]s.
 class UnitConverterApp extends StatelessWidget {
   const UnitConverterApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Unit Converter',
+      title: 'Stock Management',
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(
               bodyColor: Colors.black,
@@ -37,7 +38,8 @@ class UnitConverterApp extends StatelessWidget {
         textSelectionTheme:
             TextSelectionThemeData(selectionHandleColor: Colors.green[500]),
       ),
-      home: const CategoryRoute(),
+//      home: const CategoryRoute(),
+      home: const ConverterRoute(),
     );
   }
 }

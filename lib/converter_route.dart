@@ -16,15 +16,15 @@ const _padding = EdgeInsets.all(16.0);
 /// because it is responsible for the UI at the route's destination.
 class ConverterRoute extends StatefulWidget {
   /// Color for this [Category].
-  final Color color;
+  // final Color color;
 
   /// Units for this [Category].
-  final List<Unit> units;
+  // final List<Unit> units;
 
   /// This [ConverterRoute] requires the color and units to not be null.
   const ConverterRoute({
-    required this.color,
-    required this.units,
+    // required this.color,
+    // required this.units,
     Key? key,
   }) : super(key: key);
 
@@ -49,27 +49,27 @@ class _ConverterRouteState extends State<ConverterRoute> {
 
   /// Creates fresh list of [DropdownMenuItem] widgets, given a list of [Unit]s.
   void _createDropdownMenuItems() {
-    var newItems = <DropdownMenuItem>[];
-    for (var unit in widget.units) {
-      newItems.add(DropdownMenuItem(
-        value: unit.name,
-        child: Text(
-          unit.name!,
-          softWrap: true,
-        ),
-      ));
-    }
-    setState(() {
-      _unitMenuItems = newItems;
-    });
+    // var newItems = <DropdownMenuItem>[];
+    // for (var unit in widget.units) {
+    //   newItems.add(DropdownMenuItem(
+    //     value: unit.name,
+    //     child: Text(
+    //       unit.name!,
+    //       softWrap: true,
+    //     ),
+    //   ));
+    // }
+    // setState(() {
+    //   _unitMenuItems = newItems;
+    // });
   }
 
   /// Sets the default values for the 'from' and 'to' [Dropdown]s.
   void _setDefaults() {
-    setState(() {
-      _fromValue = widget.units[0];
-      _toValue = widget.units[1];
-    });
+    // setState(() {
+    //   _fromValue = widget.units[0];
+    //   _toValue = widget.units[1];
+    // });
   }
 
   /// Clean up conversion; trim trailing zeros, e.g. 5.500 -> 5.5, 10.0 -> 10
@@ -115,30 +115,30 @@ class _ConverterRouteState extends State<ConverterRoute> {
     });
   }
 
-  Unit? _getUnit(String? unitName) {
-    return widget.units.firstWhereOrNull(
-      (Unit unit) {
-        return unit.name == unitName;
-      },
-    );
-  }
+  // Unit? _getUnit(String? unitName) {
+  //   return widget.units.firstWhereOrNull(
+  //     (Unit unit) {
+  //       return unit.name == unitName;
+  //     },
+  //   );
+  // }
 
   void _updateFromConversion(dynamic unitName) {
-    setState(() {
-      _fromValue = _getUnit(unitName);
-    });
-    if (_inputValue != null) {
-      _updateConversion();
-    }
+    // setState(() {
+    //   _fromValue = _getUnit(unitName);
+    // });
+    // if (_inputValue != null) {
+    //   _updateConversion();
+    // }
   }
 
   void _updateToConversion(dynamic unitName) {
-    setState(() {
-      _toValue = _getUnit(unitName);
-    });
-    if (_inputValue != null) {
-      _updateConversion();
-    }
+    // setState(() {
+    //   _toValue = _getUnit(unitName);
+    // });
+    // if (_inputValue != null) {
+    //   _updateConversion();
+    // }
   }
 
   Widget _createDropdown(

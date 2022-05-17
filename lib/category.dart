@@ -53,9 +53,9 @@ class Category extends StatelessWidget {
             centerTitle: true,
             backgroundColor: color,
           ),
-          body: ConverterRoute(
-            color: color,
-            units: units,
+          body: const ConverterRoute(
+            // color: color,
+            // units: units,
           ),
           // This prevents the attempt to resize the screen when the keyboard
           // is opened
